@@ -1,0 +1,1 @@
+<?phpnamespace DoctorScript\Mvc\View\Exception;class InvalidPluginException extends \Exception{}

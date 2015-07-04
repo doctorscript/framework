@@ -1,0 +1,1 @@
+<?phpnamespace DoctorScript\Mvc\View\Plugin;interface MarkerInterface{}
