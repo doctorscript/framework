@@ -13,7 +13,7 @@ abstract class AbstractPluginProvider implements PluginManagerAwareInterface
     protected $pluginManager;
 
     /**
-     * If any class extends AbstractPluginProvider and in that class or by instance trying call to undefined method, called method name uses as plugin name 
+     * If any class extends AbstractPluginProvider and by instance trying call to undefined method, called method name uses as plugin name 
      * After detecting called method name, AbstractPluginProvider query to PluginManager and search instance for plugin by given name
      * If instance is found, that may be called with two ways 
      * First, if instance is callable, it`s called as callback with passed arguments
