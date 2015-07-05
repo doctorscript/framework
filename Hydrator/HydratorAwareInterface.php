@@ -1,0 +1,1 @@
+<?phpnamespace DoctorScript\Hydrator;interface HydratorAwareInterface{    /**     * Set hydrator     *     * @param  HydratorInterface $hydrator     * @return void    */    public function setHydrator(HydratorInterface $hydrator);        /**     * Get hydrator     *      * @return HydratorInterface    */    public function getHydrator();}
