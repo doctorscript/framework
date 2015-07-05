@@ -7,7 +7,7 @@ class RouteMatch implements RouteMatchInterface
     
     public function __construct(array $params = [])
     {
-        if (count($params) == 0) {
+        if (count($params) > 0) {
             $this->setParams($params);
         }
     }
