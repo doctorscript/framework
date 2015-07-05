@@ -35,18 +35,19 @@ class OnRoute
                 throw new \RuntimeException(sprintf(
                     'Action %s of controller %s is not exists', $actionName, $controllerName
                 ));
-            } else {
-                $controllerManager->injectControllerDependencies($controller);
-                $controllerNS = substr($controllerName, 0, strrpos($controllerName, '\\'));
-
-                $eventManager = $e->getTarget()->getEventManager();
-                $eventManager->trigger($controllerNS);
-                $eventManager->trigger($controllerName);
-                $eventManager->trigger($e::EVENT_BEFORE_ACTION);
-                $eventManager->trigger($e::EVENT_PARSE_ACTION_RESULT, null, [
-                    'actionResult' => $controller->$actionName()
-                ]);
             }
+            
+            $controllerManager->injectControllerDependencies($controller);
+            $controllerNS = substr($controllerName, 0, strrpos($controllerName, '\\'));
+
+            $eventManager = $e->getTarget()->getEventManager();
+            $eventManager->trigger($controllerNS);
+            $eventManager->trigger($controllerName);
+            $eventManager->trigger($e::EVENT_BEFORE_ACTION);
+            $eventManager->trigger($e::EVENT_PARSE_ACTION_RESULT, null, [
+                'actionResult' => $controller->$actionName()
+            ]);
+            
         }
     }
 }
