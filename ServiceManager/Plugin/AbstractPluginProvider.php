@@ -42,9 +42,9 @@ abstract class AbstractPluginProvider implements PluginManagerAwareInterface
 
         if (is_callable($plugin)) {
             return call_user_func_array($plugin, $args);
-        } else {
-            return $plugin;
         }
+        
+        return $plugin;
     }
 
     /**
