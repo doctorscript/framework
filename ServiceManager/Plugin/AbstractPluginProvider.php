@@ -2,7 +2,6 @@
 namespace DoctorScript\ServiceManager\Plugin;
 
 use DoctorScript\ServiceManager\ServiceLocatorInterface;
-use DoctorScript\ServiceManager\Plugin\PluginManagerAwareInterface;
 
 abstract class AbstractPluginProvider implements PluginManagerAwareInterface
 {
