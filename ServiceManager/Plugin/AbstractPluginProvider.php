@@ -6,8 +6,6 @@ use DoctorScript\ServiceManager\ServiceLocatorInterface;
 abstract class AbstractPluginProvider implements PluginManagerAwareInterface
 {
     /**
-     * Service locator implementation instance
-     *
      * @var ServiceLocatorInterface
     */
     protected $pluginManager;
