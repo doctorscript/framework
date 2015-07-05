@@ -53,7 +53,7 @@ class TemplateResolver implements ResolverInterface
     */
     public function resolve($aliasOrTemplatePath)
     {    
-        if (!is_file($aliasOrTemplatePath) && !$this->hasTemplate($aliasOrTemplatePath)) {
+        if (!$this->hasTemplate($aliasOrTemplatePath)) {
             throw new \RuntimeException(sprintf(
                 'Cannot resolve template %s', $aliasOrTemplatePath
             ));
