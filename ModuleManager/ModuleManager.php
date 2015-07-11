@@ -93,7 +93,7 @@ class ModuleManager implements ModuleManagerInterface
             
         foreach ($this->getLoadedModules() as $module) {
             if (method_exists($module, 'getConfig')) {
-                $config = array_merge($config, $module->getConfig());
+                $config = array_merge_recursive($config, $module->getConfig());
             }
         }
 
